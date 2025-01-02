@@ -26,14 +26,36 @@ st.write(arr_2d.ndim)
 st.write(arr_2d.shape)
 st.write(arr_2d.size)
 
+
+st.write('Simple Operations')
+st.write('Numpy addition')
 # Array addition
 array1 = np.array([1, 2, 3])
 array2 = np.array([4, 5, 6])
 result = array1 + array2
-st.write(array1)
-st.write( array2)
-st.write(result)
+# st.write(array1)
+# st.write( array2)
+# st.write(result)
 
+
+
+col1, col2, col3, col4, col5 = st.columns(5, gap="small", vertical_alignment="center", border=False)
+
+col1.write(array1)
+
+col2.write("plus")
+
+col3.write(array2)
+
+col4.write("=")
+
+col5.write(result)
+
+
+# Scalar multiplication
+# arr = np.array([1, 2, 3])
+# result2 = arr * 2 # each element of an array is multiplied by 2
+# st.write(result2)
 # name = st.text_input("What's your name")
 # age = st.number_input("What's your age?", min_value=0, max_value=120, value=18)
 
