@@ -1,6 +1,9 @@
 import streamlit as st
 import numpy as np
 
+
+st.title("Welcome to the Multi-Page App")
+st.write("Navigate through the pages using the sidebar.")
 # Write and magic
 st.write("Hello **world**!")
 st.write("Hello, *World!* :sunglasses:")
