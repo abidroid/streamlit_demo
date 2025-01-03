@@ -4,20 +4,7 @@ import numpy as np
 
 st.title("Welcome to the Multi-Page App")
 st.write("Navigate through the pages using the sidebar.")
-# Write and magic
-st.write("Hello **world**!")
-st.write("Hello, *World!* :sunglasses:")
 
-
-
-st.title("Streamlit Widgets Example")
-st.header("Basic Widgets")
-st.subheader("Sub Heading")
-st.caption("Small Text")
-st.code(""" 
-a = 24
-print(a)
-""")
 
 st.subheader('Numpy Understandings')
 arr_1d = np.array([1, 2, 3, 4, 5]) # **np.array()** is used to create NumPy arrays.
