@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 st.title("Understanding Columns")
 
 abid, zahid, shahid = st.columns(3)
