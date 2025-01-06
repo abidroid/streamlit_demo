@@ -8,6 +8,8 @@ streamlit = "*"
 numpy = "*"
 pandas = "*"
 beautifulsoup4 = "*"
+pillow = "*"
+cairosvg = "*"
 
 [dev-packages]
 

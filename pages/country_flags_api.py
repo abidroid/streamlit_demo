@@ -25,3 +25,24 @@ if st.button("Fetch All Countries"):
         st.success("Data fetched successfully!")
         st.json(data)
         st.write(len(data['data']))
+
+        col1, col2 = st.columns(2)
+        for json_country in data['data'][:5]:
+            flag_image_response = requests.get(json_country['flag'])
+            if flag_image_response.status_code == 200:
+                flag_content = flag_image_response.text
+                # Wrap the SVG content in a div with specified width and height
+                    # Wrap the SVG content inside a styled <div> with object-fit
+                styled_svg = f'''
+                <div style="width: 300px; height: 200px; border: 1px solid black; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                    <img src="data:image/svg+xml;base64,{flag_content.encode('utf-8').decode('utf-8')}" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                '''
+                col1.markdown(styled_svg, unsafe_allow_html=True)
+            
+            country_markdown = f'''
+            <div style="width: 300px; height: 200px; border: 1px solid black; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                {json_country["name"]}
+                </div>
+            '''
+            col2.markdown(country_markdown, unsafe_allow_html=True)
